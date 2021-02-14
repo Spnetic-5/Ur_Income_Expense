@@ -54,7 +54,7 @@ ROOT_URLCONF = 'expenseswebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'expenseswebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'), 
-        'PASSWORD' : os.environ.get('DB_USER_PASSWORD'),
-        'HOST' : os.environ.get('DB_HOST'),
-        'PORT': '5432'
+        'NAME': 'iedb',
+        'USER': 'postgres', 
+        'PASSWORD' : '1234',
+        'HOST' : 'localhost',
+        # 'PORT' : '5432'
 
     }
 }
